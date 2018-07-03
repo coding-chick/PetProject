@@ -31,7 +31,7 @@ data class GenericString(
         @SerializedName("\$t") val t: String
 )
 
-class Message()
+class Message
 
 data class Pets(
         val pet: List<Pet>
@@ -87,9 +87,9 @@ data class SinglePhoto(
 )
 
 enum class Size {
-    Fpm,
-    Pn,
-    Pnt,
-    T,
-    X
+    fpm,
+    pn,
+    pnt,
+    t,
+    x
 }
