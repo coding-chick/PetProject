@@ -42,7 +42,7 @@ data class Pet(
         //val contact: Contact,
         val age: GenericString,
         val size: GenericString,
-        val media: Media,
+        @SerializedName("media")val media: Media,
         val id: GenericString,
         //val shelterPetID: GenericString,
         //  val breeds: Breeds,
@@ -73,17 +73,17 @@ data class Contact(
 )
 
 data class Media(
-        val photos: Photos? = null
+        val photos: Photos?
 )
 
 data class Photos(
-        val photo: List<Photo>
+        @SerializedName("photo")val photoList: List<SinglePhoto>
 )
 
-data class Photo(
-        val size: Size,
-        val t: String,
-        val id: String
+data class SinglePhoto(
+        @SerializedName("@size")val size: Size,
+        @SerializedName("\$t")val t: String,
+        @SerializedName("@id")val id: String
 )
 
 enum class Size {

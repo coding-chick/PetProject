@@ -9,7 +9,6 @@ import com.example.effie.petproject.network.PetApi
 import io.reactivex.Observable
 import io.reactivex.schedulers.Schedulers
 
-
 class MainActivityViewModel(petApi: PetApi.PetApiClient? = null) : ViewModel() {
     private val petApiClient: PetApi.PetApiClient = petApi ?: PetApi().getPetApiClient()
     val petsInSearch: MutableLiveData<List<Pet>> = MutableLiveData()

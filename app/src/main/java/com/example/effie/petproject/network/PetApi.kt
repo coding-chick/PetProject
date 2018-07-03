@@ -6,6 +6,7 @@ import io.reactivex.Observable
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 private var apiClient: PetApi.PetApiClient? = null
 
@@ -30,6 +31,6 @@ class PetApi {
 
     interface PetApiClient {
         @GET("pet.find?key=5011e6dbd54925346f9b3a1d9e7817e6&format=json&animal=dog&location=94107")
-        fun searchPet(): Observable<RootResponse>
+        fun searchPet(@Query("lastOffset") lastOffset: Int = 0): Observable<RootResponse>
     }
 }
