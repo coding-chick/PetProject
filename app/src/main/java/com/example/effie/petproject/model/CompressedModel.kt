@@ -42,7 +42,7 @@ data class Pet(
         //val contact: Contact,
         val age: GenericString,
         val size: GenericString,
-        @SerializedName("media")val media: Media,
+        val media: Media,
         val id: GenericString,
         //val shelterPetID: GenericString,
         //  val breeds: Breeds,

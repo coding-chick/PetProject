@@ -41,7 +41,7 @@ class SearchPetsAdapter(liveData: LiveData<List<PetViewModel>>, owner: Lifecycle
             Picasso.get()
                     .load(this.imageUrl())
                     .transform(RoundedCornersTransformation(30, 0))
-                    // .placeholder(R.id.)
+                    .placeholder(R.drawable.placeholder)
                     .into(holder.imageView)
             this.petModel.apply {
                 holder.petNameTextView.text = name.t

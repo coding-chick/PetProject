@@ -17,6 +17,7 @@ abstract class LiveDataAdapter<T, VH : RecyclerView.ViewHolder>(liveData: LiveDa
                 items = result
                 notifyDataSetChanged()
             } else {
+                //TODO - explore paging library or hook up this portion to the app
                 val itemsSize = items!!.size
                 items = result
                 this.notifyItemRangeInserted(itemsSize, items!!.size)
